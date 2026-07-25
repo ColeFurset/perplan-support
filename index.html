@@ -1,0 +1,644 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><style>/*! tailwindcss v4.2.1 | MIT License | https://tailwindcss.com */
+@layer theme, base, components, utilities;
+@layer theme {
+  :root, :host {
+    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace;
+    --spacing: 0.25rem;
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+  }
+}
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+  }
+  html,
+  :host {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+    font-feature-settings: var(--default-font-feature-settings, normal);
+    font-variation-settings: var(--default-font-variation-settings, normal);
+    -webkit-tap-highlight-color: transparent;
+  }
+  hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+  }
+  abbr:where([title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+  }
+  b,
+  strong {
+    font-weight: bolder;
+  }
+  code,
+  kbd,
+  samp,
+  pre {
+    font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
+    font-feature-settings: var(--default-mono-font-feature-settings, normal);
+    font-variation-settings: var(--default-mono-font-variation-settings, normal);
+    font-size: 1em;
+  }
+  small {
+    font-size: 80%;
+  }
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sub {
+    bottom: -0.25em;
+  }
+  sup {
+    top: -0.5em;
+  }
+  table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+  }
+  :-moz-focusring {
+    outline: auto;
+  }
+  progress {
+    vertical-align: baseline;
+  }
+  summary {
+    display: list-item;
+  }
+  ol,
+  ul,
+  menu {
+    list-style: none;
+  }
+  img,
+  svg,
+  video,
+  canvas,
+  audio,
+  iframe,
+  embed,
+  object {
+    display: block;
+    vertical-align: middle;
+  }
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+  button,
+  input,
+  select,
+  optgroup,
+  textarea,
+  ::file-selector-button {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    border-radius: 0;
+    background-color: transparent;
+    opacity: 1;
+  }
+  :where(select:is([multiple], [size])) optgroup {
+    font-weight: bolder;
+  }
+  :where(select:is([multiple], [size])) optgroup option {
+    padding-inline-start: 20px;
+  }
+  ::file-selector-button {
+    margin-inline-end: 4px;
+  }
+  ::placeholder {
+    opacity: 1;
+  }
+  @supports (not (-webkit-appearance: -apple-pay-button))  or
+    (contain-intrinsic-size: 1px) {
+    ::placeholder {
+      color: currentcolor;
+      @supports (color: color-mix(in lab, red, red)) {
+        color: color-mix(in oklab, currentcolor 50%, transparent);
+      }
+    }
+  }
+  textarea {
+    resize: vertical;
+  }
+  ::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  ::-webkit-date-and-time-value {
+    min-height: 1lh;
+    text-align: inherit;
+  }
+  ::-webkit-datetime-edit {
+    display: inline-flex;
+  }
+  ::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+  ::-webkit-datetime-edit,
+  ::-webkit-datetime-edit-year-field,
+  ::-webkit-datetime-edit-month-field,
+  ::-webkit-datetime-edit-day-field,
+  ::-webkit-datetime-edit-hour-field,
+  ::-webkit-datetime-edit-minute-field,
+  ::-webkit-datetime-edit-second-field,
+  ::-webkit-datetime-edit-millisecond-field,
+  ::-webkit-datetime-edit-meridiem-field {
+    padding-block: 0;
+  }
+  ::-webkit-calendar-picker-indicator {
+    line-height: 1;
+  }
+  :-moz-ui-invalid {
+    box-shadow: none;
+  }
+  button,
+  input:where([type="button"], [type="reset"], [type="submit"]),
+  ::file-selector-button {
+    appearance: button;
+  }
+  ::-webkit-inner-spin-button,
+  ::-webkit-outer-spin-button {
+    height: auto;
+  }
+  [hidden]:where(:not([hidden="until-found"])) {
+    display: none !important;
+  }
+}
+@layer utilities {
+  .relative {
+    position: relative;
+  }
+  .start {
+    inset-inline-start: var(--spacing);
+  }
+  .inline {
+    display: inline;
+  }
+  .table {
+    display: table;
+  }
+}
+:root {
+  --ink: #0b0b0d;
+  --paper: #f7f7f5;
+  --muted: #66676c;
+  --line: rgba(11, 11, 13, 0.12);
+  --blue: #1597e5;
+  --blue-deep: #0874ba;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  background: var(--paper);
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+main {
+  overflow: hidden;
+}
+.nav {
+  width: min(1180px, calc(100% - 48px));
+  height: 92px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.08rem;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+}
+.brand img {
+  border-radius: 11px;
+}
+.navLinks {
+  display: flex;
+  gap: 30px;
+  color: #34353a;
+  font-size: 0.94rem;
+}
+.navLinks a,
+.policy a {
+  transition: color 160ms ease;
+}
+.navLinks a:hover,
+.policy a:hover {
+  color: var(--blue-deep);
+}
+.hero {
+  width: min(1180px, calc(100% - 48px));
+  min-height: 760px;
+  margin: 0 auto;
+  padding: 106px 0 90px;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 50px;
+}
+.eyebrow {
+  margin: 0 0 20px;
+  color: var(--blue-deep);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.hero h1 {
+  max-width: 680px;
+  margin: 0;
+  font-size: clamp(4rem, 7.2vw, 7.25rem);
+  font-weight: 670;
+  letter-spacing: -0.075em;
+  line-height: 0.92;
+}
+.lede {
+  max-width: 580px;
+  margin: 34px 0 0;
+  color: var(--muted);
+  font-size: clamp(1.12rem, 1.7vw, 1.38rem);
+  line-height: 1.55;
+  letter-spacing: -0.02em;
+}
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 40px;
+}
+.button {
+  min-height: 50px;
+  padding: 0 23px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.94rem;
+  font-weight: 650;
+  transition: transform 160ms ease,
+    background 160ms ease;
+}
+.button:hover {
+  transform: translateY(-1px);
+}
+.button.primary {
+  background: var(--ink);
+  color: #fff;
+}
+.button.primary:hover {
+  background: #29292d;
+}
+.button.secondary {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.52);
+}
+.button.secondary:hover {
+  background: #fff;
+}
+.availability {
+  margin: 24px 0 0;
+  color: #85868a;
+  font-size: 0.84rem;
+}
+.deviceStage {
+  min-height: 620px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.deviceStage::before {
+  content: "";
+  width: 560px;
+  height: 560px;
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, rgba(21, 151, 229, 0.22), transparent 45%),
+    radial-gradient(circle at 64% 66%, rgba(65, 211, 146, 0.14), transparent 40%);
+  filter: blur(8px);
+}
+.phone {
+  position: absolute;
+  overflow: hidden;
+  border: 8px solid #101014;
+  border-radius: 43px;
+  background: #050505;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2),
+    0 7px 22px rgba(0, 0, 0, 0.12);
+}
+.phone img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.phoneBack {
+  width: 248px;
+  transform: translate(138px, -12px) rotate(4deg);
+  opacity: 0.92;
+}
+.phoneFront {
+  width: 294px;
+  transform: translate(-76px, 35px) rotate(-3deg);
+  z-index: 2;
+}
+.principles {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 96px 0 120px;
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 54px;
+}
+.principles .number {
+  color: var(--blue-deep);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+.principles h2 {
+  margin: 22px 0 14px;
+  font-size: clamp(1.55rem, 2.5vw, 2.15rem);
+  letter-spacing: -0.045em;
+}
+.principles p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+.statement {
+  background: var(--ink);
+  color: #fff;
+  padding: 150px 24px;
+}
+.statement p {
+  max-width: 980px;
+  margin: 0 auto;
+  font-size: clamp(2.7rem, 6vw, 6.2rem);
+  font-weight: 610;
+  letter-spacing: -0.065em;
+  line-height: 1.02;
+}
+.section {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 140px 0;
+}
+.support {
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  gap: 100px;
+}
+.sectionIntro h2,
+.privacyHeading h2 {
+  margin: 0;
+  font-size: clamp(2.8rem, 5vw, 5.4rem);
+  font-weight: 650;
+  letter-spacing: -0.065em;
+  line-height: 0.98;
+}
+.sectionIntro > p:not(.eyebrow) {
+  max-width: 470px;
+  margin: 26px 0 32px;
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.65;
+}
+.helpList {
+  border-top: 1px solid var(--line);
+}
+.helpList details {
+  border-bottom: 1px solid var(--line);
+}
+.helpList summary {
+  padding: 25px 6px;
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.08rem;
+  font-weight: 580;
+}
+.helpList summary::-webkit-details-marker {
+  display: none;
+}
+.helpList summary::after {
+  content: "+";
+  color: var(--blue-deep);
+  font-size: 1.4rem;
+  font-weight: 350;
+}
+.helpList details[open] summary::after {
+  content: "–";
+}
+.helpList details p {
+  max-width: 620px;
+  margin: -4px 44px 26px 6px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.privacy {
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 100px;
+}
+.privacyHeading > p:last-child {
+  margin-top: 24px;
+  color: #85868a;
+  font-size: 0.84rem;
+}
+.policy {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px 54px;
+}
+.policy article:last-child {
+  grid-column: 1 / -1;
+}
+.policy h3 {
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+}
+.policy p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.policy a {
+  color: var(--blue-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+footer {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 44px 0 58px;
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 32px;
+  color: #77787d;
+  font-size: 0.82rem;
+}
+.footerBrand {
+  color: var(--ink);
+}
+footer p {
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+    padding-top: 84px;
+    grid-template-columns: 1fr;
+  }
+  .deviceStage {
+    min-height: 650px;
+  }
+  .principles {
+    grid-template-columns: 1fr;
+    gap: 46px;
+  }
+  .support,
+  .privacy {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+  .policy {
+    gap: 42px;
+  }
+}
+@media (max-width: 620px) {
+  .nav {
+    width: min(100% - 32px, 1180px);
+    height: 78px;
+  }
+  .navLinks {
+    gap: 18px;
+  }
+  .hero,
+  .principles,
+  .section,
+  footer {
+    width: min(100% - 32px, 1180px);
+  }
+  .hero {
+    padding-top: 70px;
+    gap: 24px;
+  }
+  .hero h1 {
+    font-size: clamp(3.6rem, 18vw, 5.5rem);
+  }
+  .lede {
+    font-size: 1.05rem;
+  }
+  .deviceStage {
+    min-height: 520px;
+  }
+  .deviceStage::before {
+    width: 420px;
+    height: 420px;
+  }
+  .phoneFront {
+    width: 224px;
+    transform: translate(-50px, 20px) rotate(-3deg);
+  }
+  .phoneBack {
+    width: 190px;
+    transform: translate(92px, -14px) rotate(4deg);
+  }
+  .principles {
+    padding: 70px 0 90px;
+  }
+  .statement {
+    padding: 100px 20px;
+  }
+  .section {
+    padding: 100px 0;
+  }
+  .policy {
+    grid-template-columns: 1fr;
+  }
+  .policy article:last-child {
+    grid-column: auto;
+  }
+  footer {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .button,
+  .navLinks a,
+  .policy a {
+    transition: none;
+  }
+}
+</style><title>PerPlan — Plans, without the noise.</title><meta name="description" content="Official support and privacy information for PerPlan on iPhone and Mac."/><meta property="og:title" content="PerPlan — The plan set. In your pocket."/><meta property="og:description" content="Local plan reference for iPhone and Mac."/><meta property="og:url" content="https://colefurset.github.io/perplan-support"/><meta property="og:type" content="website"/><meta property="og:image" content="https://colefurset.github.io/perplan-support/og.png"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image:alt" content="PerPlan — The plan set. In your pocket."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="PerPlan — The plan set. In your pocket."/><meta name="twitter:description" content="Local plan reference for iPhone and Mac."/><meta name="twitter:image" content="https://colefurset.github.io/perplan-support/og.png"/><link rel="shortcut icon" href="https://colefurset.github.io/perplan-support/perplan-icon.png"/><link rel="icon" href="https://colefurset.github.io/perplan-support/perplan-icon.png"/><link rel="apple-touch-icon" href="https://colefurset.github.io/perplan-support/perplan-icon.png"/>
+
+
+
+
+
+
+<meta name="theme-color" content="#f7f7f5"/></head><body class="__variable_geist_0l0iqgf"><main><nav class="nav" aria-label="Primary navigation"><a class="brand" href="#top" aria-label="PerPlan home"><img src="perplan-icon.png" alt="" width="44" height="44" loading="eager" fetchPriority="high" decoding="async"/><span>PerPlan</span></a><div class="navLinks"><a href="#support">Support</a><a href="#privacy">Privacy</a></div></nav><section class="hero" id="top"><div class="heroCopy"><p class="eyebrow">Plans, without the noise.</p><h1>The plan set.<br/>In your pocket.</h1><p class="lede">Open construction PDFs, move page by page, and find the source—while keeping project documents on your device.</p><div class="heroActions"><a class="button primary" href="#support">Get support</a><a class="button secondary" href="#privacy">Read privacy</a></div><p class="availability">Designed for iPhone and Mac.</p></div><div class="deviceStage" aria-label="PerPlan app preview"><div class="phone phoneBack"><img src="perplan-search.png" alt="PerPlan source-grounded plan search results" width="1242" height="2688" loading="eager" fetchPriority="high" decoding="async" sizes="(max-width: 760px) 42vw, 260px"/></div><div class="phone phoneFront"><img src="perplan-viewer.png" alt="PerPlan PDF construction plan viewer" width="1242" height="2688" loading="eager" fetchPriority="high" decoding="async" sizes="(max-width: 760px) 50vw, 300px"/></div></div></section><section class="principles" aria-label="Why PerPlan"><article><span class="number">01</span><h2>Your plans stay yours.</h2><p>PerPlan works locally. Project PDFs are not uploaded to a PerPlan account or cloud service.</p></article><article><span class="number">02</span><h2>Find the source.</h2><p>Search embedded PDF text and open a result directly on the page where it was found.</p></article><article><span class="number">03</span><h2>Calm by design.</h2><p>A focused project library, a clear viewer, and controls that stay out of the way.</p></article></section><section class="statement"><p>Built for the moment you need the drawing—not another dashboard.</p></section><section class="support section" id="support"><div class="sectionIntro"><p class="eyebrow">Support</p><h2>Simple help. From a real person.</h2><p>Tell us what happened, which device you are using, and the step where you got stuck. Never email confidential plan files.</p><a class="button primary" href="mailto:clydesroll@gmail.com?subject=PerPlan%20Support">Email PerPlan support</a></div><div class="helpList"><details><summary>How do I add a plan set?</summary><p>From Projects, tap the plus button, name the project, and choose a PDF from Files. PerPlan creates a local project around that plan set.</p></details><details><summary>Why does search skip some pages?</summary><p>Search uses text embedded in the PDF. Scanned image-only pages may not contain searchable text and are identified honestly as unavailable for text search.</p></details><details><summary>How do I replace a PDF?</summary><p>Open the project and choose Replace PDF. Select the updated plan set from Files, then verify the page count and drawings.</p></details><details><summary>Does PerPlan verify construction details?</summary><p>No. PerPlan is a plan-reference and navigation tool. Always verify dimensions, specifications, and construction details against the stamped plan set and applicable requirements.</p></details></div></section><section class="privacy section" id="privacy"><div class="privacyHeading"><p class="eyebrow">Privacy</p><h2>Private by default.</h2><p>Effective July 24, 2026</p></div><div class="policy"><article><h3>The short version</h3><p>PerPlan does not require an account. The app does not include advertising, tracking, cloud sync, or third-party analytics. Project documents and search processing remain on your device.</p></article><article><h3>Information the app processes</h3><p>PerPlan processes the PDF files you choose, project names, page information, and local search indexes to provide its features. This information is stored locally on your device and is not sent to PerPlan servers.</p></article><article><h3>Collection and sharing</h3><p>PerPlan does not collect or sell personal information through the app. The app does not share project documents or usage data with advertising networks, analytics providers, or data brokers.</p></article><article><h3>Support messages</h3><p>If you contact support, your email provider sends the message and any details you choose to include. Support correspondence is used only to answer your request and may be retained as needed to maintain an accurate support history.</p></article><article><h3>Website information</h3><p>This website does not use advertising cookies or behavioral analytics. Its hosting provider may process basic technical request information, such as an IP address and browser type, to deliver and protect the site.</p></article><article><h3>Retention and deletion</h3><p>App data remains on your device until you delete a project or the app. A source PDF stored in Files remains under your control. You may request deletion of support correspondence by contacting us.</p></article><article><h3>Changes and contact</h3><p>If PerPlan’s data practices change, this policy will be updated before those changes take effect. For privacy questions or deletion requests, email<!-- --> <a href="mailto:clydesroll@gmail.com">clydesroll@gmail.com</a>.</p></article></div></section><footer><a class="brand footerBrand" href="#top"><img src="perplan-icon.png" alt="" width="36" height="36" loading="lazy" decoding="async"/><span>PerPlan</span></a><p>Local plan reference for iPhone and Mac.</p><p>© 2026 PerPlan. All rights reserved.</p></footer></main></body></html>
